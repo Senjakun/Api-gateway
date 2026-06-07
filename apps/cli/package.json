@@ -1,0 +1,33 @@
+{
+  "name": "@nusaai/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NusaAI CLI – manage keys, usage, chat via terminal",
+  "bin": {
+    "nusaai": "./dist/index.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "type-check": "tsc --noEmit",
+    "lint": "echo 'lint placeholder'",
+    "test": "echo 'test placeholder'",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@nusaai/shared": "workspace:*",
+    "axios": "^1.7.0",
+    "commander": "^12.1.0",
+    "inquirer": "^12.2.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.4.0"
+  }
+}
